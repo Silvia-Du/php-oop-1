@@ -33,12 +33,36 @@ $dudiFilm = new Movie(
    9.5
 );
 
-var_dump($codiceDaBrivido);
-var_dump($dudiFilm);
+
 
 ?>
 <main>
-   
+
+
+<div class="movie">
+
+   <h4><?php echo $codiceDaBrivido->getTitle() ?></h4>
+   <p><?php echo $codiceDaBrivido->getDescription() ?></p>
+   <p>Lingua: <?php echo $codiceDaBrivido->getLanguage() ?></p>
+   <p>Solo adulti:<?php echo $codiceDaBrivido->getAdultsOnly() ?></p>
+   <p>Prima uscita: <?php echo $codiceDaBrivido->getReleaseDate() ?></p>
+   <p>Durata: <?php echo $codiceDaBrivido->getRunTime() ?></p>
+   <p>Voti ricevuti:<?php echo $codiceDaBrivido->getVoteCount() ?></p>
+   <p>Voto film: <?php echo $codiceDaBrivido->getVoteAverage() ?></p>
+</div>
+<div class="movie">
+
+   <h4><?php echo $dudiFilm->getTitle() ?></h4>
+   <p><?php echo $dudiFilm->getDescription() ?></p>
+   <p>Lingua: <?php echo $dudiFilm->getLanguage() ?></p>
+   <p>Solo adulti:<?php echo $dudiFilm->getAdultsOnly() ?></p>
+   <p>Prima uscita: <?php echo $dudiFilm->getReleaseDate() ?></p>
+   <p>Durata: <?php echo $dudiFilm->getRunTime() ?></p>
+   <p>Voti ricevuti:<?php echo $dudiFilm->getVoteCount() ?></p>
+   <p>Voto film: <?php echo $dudiFilm->getVoteAverage() ?></p>
+</div>
+
+
 </main>
 
 <?php
