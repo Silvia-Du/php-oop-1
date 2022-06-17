@@ -9,6 +9,22 @@
 La classe può essere definita internamente al file index.php o essere inclusa (soluzione preferibile)
 */
 
+class Movie {
+   private $title;
+   private $original_title;
+   private $description;
+   private $language;
+   private $original_language;
+   private $genres;
+   private $actors;
+   private $adults;
+   private $production_companies;
+   private $release_date;
+   private $runtime;
+   private $vote_count;
+   private $vote_average;
+}
+
 
 
 ?>
