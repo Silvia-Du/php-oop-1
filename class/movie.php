@@ -41,7 +41,7 @@ class Movie{
       $this ->release_date = $_release_date;
       $this ->runtime = $_runtime;
       $this ->vote_count = $_vote_count;
-      $this ->vote_average = $_vote_average;
+      
 
    }
 
@@ -74,9 +74,6 @@ class Movie{
       return $this->vote_count;
    }
 
-   public function getVoteAverage(){
-      return $this->vote_average;
-   }
 }
 
 

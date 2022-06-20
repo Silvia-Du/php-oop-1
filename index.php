@@ -48,7 +48,6 @@ $dudiFilm = new Movie(
    <p>Prima uscita: <?php echo $codiceDaBrivido->getReleaseDate() ?></p>
    <p>Durata: <?php echo $codiceDaBrivido->getRunTime() ?></p>
    <p>Voti ricevuti:<?php echo $codiceDaBrivido->getVoteCount() ?></p>
-   <p>Voto film: <?php echo $codiceDaBrivido->getVoteAverage() ?></p>
 </div>
 <div class="movie">
 
@@ -59,7 +58,6 @@ $dudiFilm = new Movie(
    <p>Prima uscita: <?php echo $dudiFilm->getReleaseDate() ?></p>
    <p>Durata: <?php echo $dudiFilm->getRunTime() ?></p>
    <p>Voti ricevuti:<?php echo $dudiFilm->getVoteCount() ?></p>
-   <p>Voto film: <?php echo $dudiFilm->getVoteAverage() ?></p>
 </div>
 
 
