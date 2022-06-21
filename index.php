@@ -12,6 +12,7 @@ require_once __DIR__. './partial/head.php';
 require_once __DIR__. './partial/header.php';
 require_once __DIR__. './class/Movie.php';
 
+$movies = [];
 
 $codiceDaBrivido = new Movie(
    'Un codice da brivido', 
@@ -33,34 +34,33 @@ $dudiFilm = new Movie(
    9.5
 );
 
+$movies []= $codiceDaBrivido;
+$movies []= $dudiFilm;
 
 
 ?>
-<main>
+<main class="debug">
+
+   <div class="container">
+      <h1>Movies by Dudi</h1>
 
 
-<div class="movie">
+      <?php foreach($movies as $movie): ?>
+         <div class="movie debug">
 
-   <h4><?php echo $codiceDaBrivido->getTitle() ?></h4>
-   <p><?php echo $codiceDaBrivido->getDescription() ?></p>
-   <p>Lingua: <?php echo $codiceDaBrivido->getLanguage() ?></p>
-   <p>Solo adulti:<?php echo $codiceDaBrivido->getAdultsOnly() ?></p>
-   <p>Prima uscita: <?php echo $codiceDaBrivido->getReleaseDate() ?></p>
-   <p>Durata: <?php echo $codiceDaBrivido->getRunTime() ?></p>
-   <p>Voti ricevuti:<?php echo $codiceDaBrivido->getVoteCount() ?></p>
-</div>
-<div class="movie">
+            <h3><?php echo $movie->getTitle() ?></h3>
+   
+            <h4><?php echo $movie->getOverview() ?></h4>
+   
+            <p>Lingua: <?php echo $movie->getLanguage() ?></p>
+            <p>Solo adulti:<?php echo $movie->getAdultsOnly() ?></p>
+            <p>Voti ricevuti:<?php echo $movie->getVoteCount() ?></p>
+   
+         </div>
+      <?php endforeach; ?>
 
-   <h4><?php echo $dudiFilm->getTitle() ?></h4>
-   <p><?php echo $dudiFilm->getDescription() ?></p>
-   <p>Lingua: <?php echo $dudiFilm->getLanguage() ?></p>
-   <p>Solo adulti:<?php echo $dudiFilm->getAdultsOnly() ?></p>
-   <p>Prima uscita: <?php echo $dudiFilm->getReleaseDate() ?></p>
-   <p>Durata: <?php echo $dudiFilm->getRunTime() ?></p>
-   <p>Voti ricevuti:<?php echo $dudiFilm->getVoteCount() ?></p>
-</div>
-
-
+   </div>
+   
 </main>
 
 <?php

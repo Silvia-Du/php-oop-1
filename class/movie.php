@@ -101,7 +101,11 @@ class Movie{
    }
 
    public function getAdultsOnly(){
-      return $this->adults;
+      if($this->adults){
+         return 'Età: 18+';
+      }else{
+         return 'Film per tutta la famiglia';
+      }
    }
 
    public function getReleaseDate(){
@@ -114,6 +118,10 @@ class Movie{
 
    public function getVoteCount(){
       return $this->vote_count;
+   }
+
+   public function getOverview(){
+      return "Film del $this->release_date, della durata di: $this->runtime; $this->description;";
    }
 
 }
