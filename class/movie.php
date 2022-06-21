@@ -15,24 +15,21 @@ class Movie{
    private $description;
    private $language;
    private $original_language;
-   private $genres;
-   private $actors;
    private $adults;
-   private $production_companies;
    private $release_date;
    private $runtime;
    private $vote_count;
-   private $vote_average;
+   
 
    //definisco all'interno del costruttore quali variabili saranno obbligatorie
    public function __construct(
                         $_title, 
                         $_description,
-                        $_language, $_adults, 
+                        $_language, 
+                        $_adults, 
                         $_release_date, 
                         $_runtime, 
-                        $_vote_count, 
-                        $_vote_average
+                        $_vote_count
                         ){
       $this ->title = $_title;
       $this ->description = $_description;
@@ -45,9 +42,50 @@ class Movie{
 
    }
 
+   /* SETTER*/
+   public function setTitle($_title){
+      $this->title = $_title;
+   }
+
+   public function setOriginalTitle($_original_title){
+      $this->original_title = $_original_title;
+   }
+
+   public function setDescription($_description){
+      $this->description = $_description;
+   }
+
+   public function setLanguage($_language){
+      $this->language = $_language;
+   }
+
+   public function setOriginalLang($_original_language){
+      $this->original_language = $_original_language;
+   }
+
+   public function setAdultsOnly($_adults){
+      $this->adults = $_adults;
+   }
+
+   public function setReleaseDate($_release_date){
+      $this->release_date = $_release_date;
+   }
+
+   public function setRunTime($_runtime){
+      $this->runtime = $_runtime;
+   }
+
+   public function setVoteCount($_vote_count){
+      $this->vote_count = $_vote_count;
+   }
+
    /* GETTER*/
    public function getTitle(){
       return $this->title;
+   }
+
+   public function getOriginalTitle(){
+      return $this->original_title;
    }
 
    public function getDescription(){
@@ -56,6 +94,10 @@ class Movie{
 
    public function getLanguage(){
       return $this->language;
+   }
+
+   public function getOriginalLang(){
+      $this->original_language;
    }
 
    public function getAdultsOnly(){
