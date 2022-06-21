@@ -39,7 +39,7 @@ $movies []= $dudiFilm;
 
 
 ?>
-<main class="debug">
+<main>
 
    <div class="container">
       <h1>Movies by Dudi</h1>
